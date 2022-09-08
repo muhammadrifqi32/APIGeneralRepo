@@ -54,12 +54,12 @@ function Save() {
             timer: 1500
         });
     } else {
-        var Department = new Object();
-        Department.Name = $('#Name').val();
+        var University = new Object();
+        University.Name = $('#Name').val();
         $.ajax({
             type: 'POST',
             url: 'https://localhost:44345/api/universities',
-            data: JSON.stringify(Department),
+            data: JSON.stringify(University),
             contentType: "application/json; charset=utf-8",
             crossDomain: true,
             headers: {
@@ -83,7 +83,7 @@ function Save() {
 }
 
 function GetById(id) {
-    debugger;
+    //debugger;
     $.ajax({
         url: "https://localhost:44345/api/universities/" + id,
         type: "GET",
@@ -102,4 +102,71 @@ function GetById(id) {
         }
     });
 }
+
+//function Update() {
+//    debugger;
+//    if ($('#Name').val() == 0) {
+//        Swal.fire({
+//            position: 'center',
+//            type: 'error',
+//            title: 'Please Full Fill The University Name',
+//            showConfirmButton: false,
+//            timer: 1500
+//        });
+//    } else {
+//        var University = new Object();
+//        University.Id = $('#Id').val();
+//        University.Name = $('#Name').val();
+//        $.ajax({
+//            type: "PUT",
+//            url: 'https://localhost:44345/api/universities/',
+//            data: JSON.stringify(University)
+//        }).then((result) => {
+//            debugger;
+//            if (result.status == 200) {
+//                Swal.fire({
+//                    position: 'center',
+//                    type: 'success',
+//                    title: 'University Updated Successfully'
+//                });
+//                table.ajax.reload();
+//            } else {
+//                Swal.fire('Error', 'Failed to Update', 'error');
+//                ClearScreen();
+//            }
+//        })
+//    }
+//}
+
+//function Delete(Id) {
+//    Swal.fire({
+//        title: 'Are you sure?',
+//        text: "You won't be able to revert this!",
+//        showCancelButton: true,
+//        confirmButtonColor: '#3085d6',
+//        cancelButtonColor: '#d33',
+//        confirmButtonText: 'Yes, delete it!'
+//    }).then((result) => {
+//        if (result.value) {
+//            debugger;
+//            $.ajax({
+//                url: "https://localhost:44345/api/universities/",
+//                data: { Id: Id }
+//            }).then((result) => {
+//                debugger;
+//                if (result.status == 200) {
+//                    Swal.fire({
+//                        position: 'center',
+//                        type: 'success',
+//                        title: 'Delete Successfully'
+//                    });
+//                    table.ajax.reload();
+//                } else {
+//                    Swal.fire('Error', 'Failed to Delete', 'error');
+//                    ClearScreen();
+//                }
+//            })
+//        };
+//    });
+//}
 
