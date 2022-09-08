@@ -38,14 +38,14 @@ namespace APIGeneralRepo.BaseController
         [HttpGet("{key}")]
         public virtual ActionResult Get(Key key)
         {
-            var get = repository.Get();
-            if (get.Count() != 0)
+            var get = repository.Get(key);
+            if (get != null)
             {
-                return StatusCode(200, new { status = HttpStatusCode.OK, message = get.Count() + " Data Ditemukan", Data = get });
+                return StatusCode(200, new { status = HttpStatusCode.OK, message = "Data Ditemukan", Data = get });
             }
             else
             {
-                return StatusCode(404, new { status = HttpStatusCode.NotFound, message = get.Count() + " Data Ditemukan", Data = get });
+                return StatusCode(404, new { status = HttpStatusCode.NotFound, message = "Data Tidak Ditemukan", Data = get });
             }
         }
 

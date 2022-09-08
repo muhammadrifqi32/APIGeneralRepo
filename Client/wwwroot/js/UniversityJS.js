@@ -1,7 +1,7 @@
 ﻿var table = null;
 
 $(document).ready(function () {
-    debugger;
+    //debugger;
     table = $('#tbUniversity').DataTable({
         "processing": true,
         "ajax": {
@@ -81,3 +81,25 @@ function Save() {
         })
     }
 }
+
+function GetById(id) {
+    debugger;
+    $.ajax({
+        url: "https://localhost:44345/api/universities/" + id,
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            const obj = result.data;
+            $('#Id').val(obj.id);
+            $('#Name').val(obj.name);
+            $('#myModal').modal('show');
+            $('#Update').show();
+            $('#Save').hide();
+        },
+        error: function (errormessage) {
+            alert(errormessage.responseText);
+        }
+    });
+}
+
