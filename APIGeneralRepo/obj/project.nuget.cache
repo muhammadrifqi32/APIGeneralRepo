@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xBynjFnxk5YkW3Exci8YC80y+x2c/s/wyjpU4GpqsQQBjNSWlk/xnHqEBUtydN+M4+ep7+hIMU1KMLqLBspoFw==",
+  "dgSpecHash": "Xvr+LjjDN+AURS4s3tur0fqGkZyKFDDLBlXYLgBfTirZLqtngK9e35LKF/2qDj2xryxXlna/RPpxt0PqwpG7Fg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rifqi\\Downloads\\Materi by Segmen\\Segmen 2\\APIGeneralRepo\\APIGeneralRepo\\APIGeneralRepo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Rifqi\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Rifqi\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Rifqi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Rifqi\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.0.0\\microsoft.aspnetcore.jsonpatch.3.0.0.nupkg.sha512",

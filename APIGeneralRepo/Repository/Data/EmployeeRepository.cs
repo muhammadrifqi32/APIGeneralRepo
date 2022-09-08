@@ -86,7 +86,7 @@ namespace APIGeneralRepo.Repository.Data
                 Account acc = new Account
                 {
                     NIK = emp.NIK,
-                    Password = registerVM.Password
+                    Password = BCrypt.Net.BCrypt.HashPassword(registerVM.Password)
                 };
                 context.Accounts.Add(acc);
                 context.SaveChanges();

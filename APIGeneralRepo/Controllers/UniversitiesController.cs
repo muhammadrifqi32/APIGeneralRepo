@@ -1,6 +1,7 @@
 ﻿using APIGeneralRepo.BaseController;
 using APIGeneralRepo.Models;
 using APIGeneralRepo.Repository.Data;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,6 +13,7 @@ namespace APIGeneralRepo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowOrigin")]
     public class UniversitiesController : BaseController<University, UniversityRepository, int>
     {
         private readonly UniversityRepository universityRepository;

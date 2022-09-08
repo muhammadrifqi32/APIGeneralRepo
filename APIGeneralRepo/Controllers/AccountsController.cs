@@ -1,6 +1,7 @@
 ﻿using APIGeneralRepo.BaseController;
 using APIGeneralRepo.Models;
 using APIGeneralRepo.Repository.Data;
+using APIGeneralRepo.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -33,6 +34,22 @@ namespace APIGeneralRepo.Controllers
                     return StatusCode(500, new { status = HttpStatusCode.InternalServerError, message = "Data Gagal Ditambahkan, NIK tidak terdaftar", Data = result });
                 default:
                     return StatusCode(500, new { status = HttpStatusCode.InternalServerError, message = "Data Gagal Ditambahkan", Data = result });
+            }
+        }
+        [HttpPost("Login")]
+        public ActionResult Login(LoginVM loginVM)
+        {
+            var login = accountRepository.Login(loginVM);
+            switch (login)
+            {
+                case 1:
+                    return StatusCode(200, new { status = HttpStatusCode.OK, message = "Login Berhasil", Data = login });
+                case 3:
+                    return StatusCode(500, new { status = HttpStatusCode.InternalServerError, message = "Email/No Hp Tidak Terdaftar", Data = login });
+                case 4:
+                    return StatusCode(500, new { status = HttpStatusCode.InternalServerError, message = "Password Salah", Data = login });
+                default:
+                    return StatusCode(500, new { status = HttpStatusCode.InternalServerError, message = "Terjadi Kesalahan", Data = login });
             }
         }
     }

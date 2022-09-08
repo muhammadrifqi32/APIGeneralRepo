@@ -1,5 +1,7 @@
 ﻿using APIGeneralRepo.Context;
 using APIGeneralRepo.Models;
+using APIGeneralRepo.ViewModels;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +19,8 @@ namespace APIGeneralRepo.Repository.Data
 
         public const int Successful = 1;
         public const int notfound = 2;
+        public const int emailOrPhoneNotFound = 3;
+        public const int wrongPassword = 4;
 
         public override int Insert(Account account)
         {
@@ -32,6 +36,29 @@ namespace APIGeneralRepo.Repository.Data
                 return notfound;
             }
             else
+            {
+                return 500;
+            }
+        }
+
+        public int Login(LoginVM loginVM)
+        {
+            var check = context.Employees.Where(e => e.Email == loginVM.Username || e.Phone == loginVM.Username).SingleOrDefault();
+            bool verify = BCrypt.Net.BCrypt.Verify(loginVM.Password, check.Account.Password);
+
+            if (check == null)
+            {
+                return emailOrPhoneNotFound;
+            }
+            else if (verify == true)
+            {
+                return Successful;
+            }
+            else if(verify == false)
+            {
+                return wrongPassword;
+            }
+            else 
             {
                 return 500;
             }

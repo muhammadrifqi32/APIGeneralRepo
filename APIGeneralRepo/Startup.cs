@@ -36,14 +36,16 @@ namespace APIGeneralRepo
             //services.AddDbContext<MyContext>(options =>
             //options.UseSqlServer(Configuration.GetConnectionString("APIGeneralRepo")));
             services.AddControllersWithViews()
-                .AddNewtonsoftJson(options => 
+                .AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
             services.AddDbContext<MyContext>(options =>
             options.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("APIGeneralRepo")));
-            services.AddCors(c =>
+            services.AddCors(e =>
             {
-                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+
+                e.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,8 +61,9 @@ namespace APIGeneralRepo
             app.UseRouting();
 
             app.UseAuthorization();
-
-            app.UseCors(options => options.AllowAnyOrigin());
+            app.UseCors(options =>
+            options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+            );
 
             app.UseEndpoints(endpoints =>
             {
