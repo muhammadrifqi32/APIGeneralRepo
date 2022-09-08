@@ -103,8 +103,6 @@ C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Deb
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
-C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Index.cshtml.g.cs
-C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Views\Test\Index.cshtml.g.cs
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.RazorTargetAssemblyInfo.cache
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.RazorTargetAssemblyInfo.cs
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.Views.pdb
@@ -112,3 +110,4 @@ C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Deb
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.dll
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.pdb
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.genruntimeconfig.cache
+C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Views\Universities\Index.cshtml.g.cs

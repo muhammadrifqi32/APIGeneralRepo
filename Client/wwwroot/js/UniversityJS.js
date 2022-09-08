@@ -1,17 +1,14 @@
 ﻿var table = null;
 
 $(document).ready(function () {
-    //debugger;
-    table = $('#tbDepartment').DataTable({
+    debugger;
+    table = $('#tbUniversity').DataTable({
         "processing": true,
         "ajax": {
             url: "https://localhost:44345/api/universities",
             type: "GET",
             "datatype": "json",
-            "dataSrc": "results",
-            success: function (result) {
-                console.log(result.data);
-            }
+            "dataSrc": "data",
         },
         "columnDefs":
             [{
