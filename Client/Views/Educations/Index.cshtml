@@ -4,16 +4,18 @@
     Layout = "~/Pages/Shared/_AdminLayout.cshtml";
 }
 
+<h1>Index</h1>
+
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>University</h1>
+                <h1>Education</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">University</li>
+                    <li class="breadcrumb-item active">Education</li>
                 </ol>
             </div>
         </div>
@@ -25,7 +27,7 @@
         <div class="row">
             <div class="col-12">
                 <span data-toggle="modal" data-target="#myModal" onclick="ClearScreen();">
-                    <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Add New University">Insert</button>
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Add New Education">Insert</button>
                 </span>
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
@@ -40,8 +42,17 @@
                                             <input type="text" class="form-control" id="Id" name="Id" hidden>
                                         </div>
                                         <div class="form-group">
-                                            <label for="Email">University Name:</label>
-                                            <input type="text" class="form-control" id="Name" placeholder="Enter University" name="Name">
+                                            <label for="Education">Education Name:</label>
+                                            <input type="text" class="form-control" id="Degree" placeholder="Select Your Degree" name="uName">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Education">GPA</label>
+                                            <input type="text" class="form-control" id="GPA" placeholder="Insert Your GPA" name="uName">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uName">University Name</label>
+                                            <select id="University" name="uName" class="form-control">
+                                            </select>
                                         </div>
                                     </form>
                                 </div>
@@ -60,11 +71,13 @@
                         </div>*@
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table id="tbUniversity" class="table table-bordered table-striped">
+                        <table id="tbEducation" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Name</th>
+                                    <th>Degree</th>
+                                    <th>GPA</th>
+                                    <th>University</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -81,7 +94,6 @@
     <!-- /.container-fluid -->
 </section>
 @section Scripts{
-    <script src="~/js/UniversityJS.js"></script>
+    <script src="~/js/EducationJS.js"></script>
     <script src="~/js/sweetalert2@9.js"></script>
 }
-

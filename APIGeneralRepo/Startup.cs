@@ -32,6 +32,7 @@ namespace APIGeneralRepo
             services.AddControllers();
             services.AddScoped<EmployeeRepository>();
             services.AddScoped<AccountRepository>();
+            services.AddScoped<EducationRepository>();
             services.AddScoped<UniversityRepository>();
             //services.AddDbContext<MyContext>(options =>
             //options.UseSqlServer(Configuration.GetConnectionString("APIGeneralRepo")));
