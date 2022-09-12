@@ -138,35 +138,36 @@ function GetById(id) {
 //    }
 //}
 
-//function Delete(Id) {
-//    Swal.fire({
-//        title: 'Are you sure?',
-//        text: "You won't be able to revert this!",
-//        showCancelButton: true,
-//        confirmButtonColor: '#3085d6',
-//        cancelButtonColor: '#d33',
-//        confirmButtonText: 'Yes, delete it!'
-//    }).then((result) => {
-//        if (result.value) {
-//            debugger;
-//            $.ajax({
-//                url: "https://localhost:44345/api/universities/",
-//                data: { Id: Id }
-//            }).then((result) => {
-//                debugger;
-//                if (result.status == 200) {
-//                    Swal.fire({
-//                        position: 'center',
-//                        type: 'success',
-//                        title: 'Delete Successfully'
-//                    });
-//                    table.ajax.reload();
-//                } else {
-//                    Swal.fire('Error', 'Failed to Delete', 'error');
-//                    ClearScreen();
-//                }
-//            })
-//        };
-//    });
-//}
+function Delete(id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.value) {
+            //debugger;
+            $.ajax({
+                url: "https://localhost:44345/api/universities/" + id,
+                type: "DELETE",
+                dataType: "json",
+            }).then((result) => {
+                debugger;
+                if (result.status == 200) {
+                    Swal.fire({
+                        position: 'center',
+                        type: 'success',
+                        title: 'Delete Successfully'
+                    });
+                    table.ajax.reload();
+                } else {
+                    Swal.fire('Error', 'Failed to Delete', 'error');
+                    ClearScreen();
+                }
+            })
+        };
+    });
+}
 

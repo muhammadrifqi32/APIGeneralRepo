@@ -50,7 +50,7 @@ function ClearScreen() {
 
 var Universities = []
 function LoadUniversity(element) {
-    debugger;
+    //debugger;
     if (Universities.length == 0) {
         $.ajax({
             type: "Get",
@@ -58,7 +58,6 @@ function LoadUniversity(element) {
             success: function (data) {
                 //debugger;
                 Universities = data.data;
-                //Departments = data;
                 renderUniversity(element);
             }
         })
