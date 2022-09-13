@@ -4,8 +4,6 @@
     Layout = "~/Pages/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Index</h1>
-
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -27,7 +25,7 @@
         <div class="row">
             <div class="col-12">
                 <span data-toggle="modal" data-target="#myModal" onclick="ClearScreen();">
-                    <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Add New Education">Insert</button>
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Add New Education"><i class="fa fa-plus"></i></button>
                 </span>
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
@@ -42,17 +40,23 @@
                                             <input type="text" class="form-control" id="Id" name="Id" hidden>
                                         </div>
                                         <div class="form-group">
-                                            <label for="Education">Education Name:</label>
-                                            <input type="text" class="form-control" id="Degree" placeholder="Select Your Degree" name="uName">
+                                            <label for="Education">Degree</label>
+                                            <select id="Degree" name="Degree" class="form-control">
+                                                <option value=0>D3</option>
+                                                <option value=1>D4</option>
+                                                <option value=2>S1</option>
+                                                <option value=3>S2</option>
+                                                <option value=4>S3</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="Education">GPA</label>
-                                            <input type="text" class="form-control" id="GPA" placeholder="Insert Your GPA" name="uName">
+                                            <input type="number" step="0.01" class="form-control" id="GPA" placeholder="Insert Your GPA" name="uName">
                                         </div>
                                         <div class="form-group">
                                             <label for="uName">University Name</label>
-                                            <select id="University" name="uName" class="form-control">
-                                                <option selected disabled>Select Supplier</option>
+                                            <select id="universityId" name="uName" class="form-control">
+                                                <option selected disabled>Select University</option>
                                             </select>
                                         </div>
                                     </form>

@@ -63,6 +63,20 @@ namespace APIGeneralRepo.BaseController
             }
         }
 
+        [HttpPut]
+        public virtual ActionResult Update(Entity entity)
+        {
+            var insert = repository.Update(entity);
+            if (insert >= 1)
+            {
+                return StatusCode(200, new { status = HttpStatusCode.OK, message = "Data Berhasil Diperbaharui", Data = insert });
+            }
+            else
+            {
+                return StatusCode(500, new { status = HttpStatusCode.InternalServerError, message = "Gagal Memperbaharui Data", Data = insert });
+            }
+        }
+
         [HttpDelete("{key}")]
         public ActionResult Delete(Key key)
         {
