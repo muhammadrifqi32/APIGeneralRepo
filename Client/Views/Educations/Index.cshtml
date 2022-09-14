@@ -24,9 +24,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <span data-toggle="modal" data-target="#myModal" onclick="ClearScreen();">
-                    <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Add New Education"><i class="fa fa-plus"></i></button>
-                </span>
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -42,6 +39,7 @@
                                         <div class="form-group">
                                             <label for="Education">Degree</label>
                                             <select id="Degree" name="Degree" class="form-control">
+                                                <option value="" selected disabled hidden>Select Degree</option>
                                                 <option value=0>D3</option>
                                                 <option value=1>D4</option>
                                                 <option value=2>S1</option>
@@ -51,12 +49,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="Education">GPA</label>
-                                            <input type="number" step="0.01" class="form-control" id="GPA" placeholder="Insert Your GPA" name="uName">
+                                            <input type="number" step="0.01" min="0" max="4.00" class="form-control" id="GPA" placeholder="Insert Your GPA" name="uName">
                                         </div>
                                         <div class="form-group">
                                             <label for="uName">University Name</label>
                                             <select id="universityId" name="uName" class="form-control">
-                                                <option selected disabled>Select University</option>
                                             </select>
                                         </div>
                                     </form>
@@ -75,7 +72,19 @@
                             <h3 class="card-title">DataTable with default features</h3>
                         </div>*@
                     <!-- /.card-header -->
+                    <div class="card-header">
+                        <h3 class="card-title">DataTable with default features</h3>
+                    </div>
                     <div class="card-body">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="card">
+                                    <span data-toggle="modal" data-target="#myModal" onclick="ClearScreen();">
+                                        <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Add New Education"><i class="fa fa-plus"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                         <table id="tbEducation" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
@@ -99,6 +108,20 @@
     <!-- /.container-fluid -->
 </section>
 @section Scripts{
+    <script src="~/AdminLTE-3.2.0/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/jszip/jszip.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
     <script src="~/js/EducationJS.js"></script>
     <script src="~/js/sweetalert2@9.js"></script>
 }

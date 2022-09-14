@@ -81,6 +81,7 @@ C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\bin\Deb
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.csproj.AssemblyReference.cache
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.AssemblyInfoInputs.cache
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.AssemblyInfo.cs
@@ -102,6 +103,7 @@ C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Deb
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Views\Dashboards\Index.cshtml.g.cs
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Views\Educations\Index.cshtml.g.cs
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Razor\Views\Universities\Index.cshtml.g.cs
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.RazorTargetAssemblyInfo.cache
@@ -111,4 +113,3 @@ C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Deb
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.dll
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.pdb
 C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.genruntimeconfig.cache
-C:\Users\Rifqi\Downloads\Materi by Segmen\Segmen 2\APIGeneralRepo\Client\obj\Debug\netcoreapp3.1\Client.csproj.AssemblyReference.cache

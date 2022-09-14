@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_AdminLayout.cshtml";
+}
+
+@section link{
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+}
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- /.card -->
+                <!-- DONUT CHART -->
+                <div class="card card-danger">
+                    <div class="card-header">
+                        <h3 class="card-title">Donut Chart</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="donut-example" style="height: 250px;"></div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!-- /.col (LEFT) -->
+            <div class="col-md-6">
+                <!-- PIE CHART -->
+                <!--<div class="card card-danger">
+                    <div class="card-header">
+                        <h3 class="card-title">Pie Chart</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="pieChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                    </div>-->
+                <!-- /.card-body -->
+                <!--</div>-->
+            </div>
+            <!-- /.col (RIGHT) -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+
+@section Scripts{
+    <!-- ChartJS -->
+    <script src="~/AdminLTE-3.2.0/plugins/chart.js/Chart.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            Bar();
+        });
+
+        function Bar() {
+            //debugger;
+            $.ajax({
+                url: "https://localhost:44345/api/educations",
+                type: "GET",
+                "datatype": "json",
+                "dataSrc": "data",
+                success: function (data) {
+                    const obj = data.data;
+                    obj.forEach(function (item) {
+                        console.log(JSON.stringify(item))
+                    });
+                    //debugger;
+                    Morris.Donut({
+                        element: 'donut-example',
+                        data: [
+                            { label: "Download Sales", value: 12 },
+                            { label: "In-Store Sales", value: 30 },
+                            { label: "Mail-Order Sales", value: 20 }
+                        ]
+                    });
+                }
+            })
+        };
+    </script>
+}

@@ -6,6 +6,16 @@ $(document).ready(function () {
         "processing": true,
         "lengthChange": false,
         "autoWidth": false,
+        dom: 'Blfrtip',
+        lengthMenu: [[5, 10, 25, 50, -1],
+        ['5', '10', '25', '50', 'Show All']],
+        dom: 'Bfrtip',
+        buttons: [
+            'pageLength',
+            { extend: 'pdf', text: ' Export to PDF' },
+            { extend: 'csv', text: ' Export to CSV' },
+            { extend: 'excel', text: ' Export to EXCEL' }
+        ],
         "ajax": {
             url: "https://localhost:44345/api/educations",
             type: "GET",
@@ -91,7 +101,7 @@ function renderUniversity(element) {
     //debugger;
     var $ele = $(element);
     $ele.empty();
-    $ele.append($('<option/>').val('0').text('Select University').hide());
+    $ele.append($('<option selected disabled hidden/>').val('').text('Select University').hide());
     $.each(Universities, function (i, val) {
         //$.each(Departments.data, function (i, val) {
         //debugger;

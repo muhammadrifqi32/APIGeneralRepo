@@ -6,18 +6,31 @@ $(document).ready(function () {
         "processing": true,
         "lengthChange": false,
         "autoWidth": false,
+        dom: 'Blfrtip',
+        lengthMenu: [[5, 10, 25, 50, -1],
+        ['5', '10', '25', '50', 'Show All']],
+        dom: 'Bfrtip',
+        buttons: [
+            'pageLength',
+            { extend: 'pdf', text: ' Export to PDF' },
+            { extend: 'csv', text: ' Export to CSV' },
+            { extend: 'excel', text: ' Export to EXCEL' }
+        ],
         "ajax": {
             url: "https://localhost:44345/api/universities",
             type: "GET",
             "datatype": "json",
             "dataSrc": "data",
+            //success: function (result) {
+            //    console.log(result)
+            //}
         },
         "columnDefs":
             [{
                 "targets": [0, 2],
                 "orderable": false
             }],
-        "order": ([[0, 'asc']], [[1, 'asc']]),
+        "order": ([[0, 'asc']],[[1, 'asc']]),
         "columns": [
             {
                 render: function (data, type, row, meta) {
